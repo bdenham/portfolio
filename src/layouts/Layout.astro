@@ -1,0 +1,58 @@
+---
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
+---
+
+<body>
+  <Header />
+  <div class='flex flex-col min-h-[100vh]'>
+    <slot />
+  </div>
+  <Footer />
+</body>
+
+<style>
+body {
+	cursor: default;
+	position: relative;
+	font-family: sans-serif, sans-serif;
+	letter-spacing: 0.025rem;
+	color: rgb(228 228 231);
+	background-color: #040404;
+}
+
+.container {
+  width: 100%;
+}
+@media (min-width: 424px) {
+  .container {
+    max-width: 424px;
+  }
+}
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
+
+</style>

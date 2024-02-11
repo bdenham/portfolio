@@ -1,0 +1,52 @@
+---
+import { Image } from 'astro:assets';
+import logo from '/src/assets/img/logo.svg';
+---
+
+<header class='header'>
+  <a class='logo' href='/'>
+    <Image src={logo} width='44' height='44' alt='My Logo' />
+  </a>
+  <nav class='nav'>
+    <ul class='navitems'>
+      <li><a href='/' class='hover-link active'> Home</a></li>
+      <li><a href='/blog' class='hover-link'>Blog</a></li>
+      <li><a href='/about' class='hover-link'>About</a></li>
+      <li><a href='/portfolio' class='hover-link'>Portfolio</a></li>
+    </ul>
+  </nav>
+</header>
+
+<style>
+  .header {
+    display: flex;
+    align-items: center;
+    min-width: 100%;
+    position: fixed;
+    z-index: 100;
+    background-color: #222;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1.5rem /* 24px */;
+    padding-right: 1.5rem /* 24px */;
+  }
+
+  .nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-left: calc(-1 * (1.5rem + 44px));
+  }
+  .logo {
+    min-width: 44px;
+    min-height: 44px;
+  }
+  .navitems {
+    display: flex;
+    font-size: 1.25rem;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+  }
+</style>
